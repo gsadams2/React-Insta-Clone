@@ -55,7 +55,25 @@
   font-weight: bold;
 }
 
-.likes h6 {
+/* .likes h6 {
   text-align: left;
   margin-left: 20%;
+} */
+
+.button-container {
+  flex-direction: row-reverse;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 20%;
+}
+.buttons {
+  display: flex;
+}
+
+.likeButton {
+  margin-right: 5%;
+}
+
+.likes {
+  margin-left: 10%;
 }
