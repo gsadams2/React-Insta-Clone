@@ -13,15 +13,18 @@ class PostContainer extends Component {
                     <img src={post.thumbnailUrl} alt="thumbnail" />
                     <h3>{post.username}</h3>
                   </header>
-
                   <img src={post.imageUrl} alt={post.id} />
+                  <div>
+                    <i class="far fa-heart" />
+                    <i class="far fa-comment" />
 
-                  <section className="likebar">{post.likes} likes</section>
-
+                    <section className="likebar">{post.likes} likes</section>
+                  </div>
                   <CommentSection
                     comments={post.comments}
                     timestamp={post.timestamp}
                   />
+                  key={post.id}
                 </>
               );
             })
