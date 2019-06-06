@@ -1,6 +1,31 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 
 import CommentSection from "../CommentSection/CommentSection";
+
+const CardHeader = styled.header`
+  display: flex;
+  align-items: center;
+  margin-left: 2%;
+`;
+
+const ThumbNail = styled.img`
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 2%;
+`;
+
+const LikeSection = styled.div`
+  margin-left: 2%;
+  position: absolute;
+  left: 4%;
+`;
+
+const LikeBar = styled.section`
+  font-weight: bold;
+`;
+
 export class Card extends Component {
   state = {
     likes: this.props.post.likes,
@@ -23,29 +48,31 @@ export class Card extends Component {
   render() {
     return (
       <div className="post-container">
-        <header>
-          <img
+        <CardHeader>
+          <ThumbNail
             className="thumbnail"
             src={this.props.post.thumbnailUrl}
             alt="thumbnail"
           />
           <h3>{this.props.post.username}</h3>
-        </header>
+        </CardHeader>
         <img
           className="main-image"
           src={this.props.post.imageUrl}
           alt={this.props.post.id}
         />
-        <div>
+        <LikeSection>
           <i
-            className={this.state.liked ? "fas fa-heart red" : "far fa-heart"}
+            className={
+              this.state.liked ? "fas fa-heart red" : "far fa-heart fa-lg"
+            }
             onClick={this.addLike}
           />
 
-          <i className="far fa-comment" />
+          <i className="far fa-comment fa-lg" />
 
-          <section className="likebar">{this.state.likes} likes</section>
-        </div>
+          <LikeBar>{this.state.likes} likes</LikeBar>
+        </LikeSection>
         <CommentSection
           comments={this.props.post.comments}
           timestamp={this.props.post.timestamp}

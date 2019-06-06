@@ -1,4 +1,19 @@
 import React, { Component } from "react";
+import styled from "styled-components";
+import CommentsYo from "./CommentsYo";
+
+const CommentForm = styled.form``;
+
+const CommentInput = styled.input`
+  border: 1px solid gray;
+  width: 635px;
+  padding: 10px 1px;
+`;
+
+const TimeStamp = styled.p`
+  font-size: 0.7rem;
+  font-color: gray;
+`;
 
 class CommentSection extends Component {
   state = {
@@ -9,7 +24,7 @@ class CommentSection extends Component {
   addNewComment = e => {
     e.preventDefault();
     const newComment = {
-      username: "George",
+      username: "Kayla",
       text: this.state.newComment
     };
 
@@ -31,22 +46,20 @@ class CommentSection extends Component {
         {this.state.comments.map(comment => {
           return (
             <>
-              <h3>{comment.username}</h3>
-              <p>{comment.text}</p>
+              <CommentsYo comment={comment} />
             </>
           );
         })}
-
-        <p className="timestamp">{this.props.timestamp}</p>
-        <form onSubmit={this.addNewComment}>
-          <input
+        <TimeStamp>{this.props.timestamp}</TimeStamp>
+        <CommentForm onSubmit={this.addNewComment}>
+          <CommentInput
             type="text"
             name="newComment"
             value={this.state.newComment}
             onChange={this.changeHandler}
-            placeholder="add a comment..."
+            placeholder="Add a comment..."
           />
-        </form>
+        </CommentForm>
       </div>
     );
   }

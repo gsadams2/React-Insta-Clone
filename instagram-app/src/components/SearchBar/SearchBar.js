@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import "./SearchBar.css";
 
 const Header = styled.div`
   display: flex;
@@ -9,22 +10,21 @@ const Header = styled.div`
 
 const LogoHeader = styled.div`
   display: flex;
-
   align-items: center;
 `;
 
 const InstagramH1 = styled.h1`
   padding-left: 10%;
+  font-size: 1rem;
 `;
 
 const Search = styled.div`
-  display: flex;
-  justify-content: center;
   padding-left: 5%;
 `;
 
 const TopRight = styled.div`
   display: flex;
+  align-items: center;
   padding-left: 5%;
 `;
 
