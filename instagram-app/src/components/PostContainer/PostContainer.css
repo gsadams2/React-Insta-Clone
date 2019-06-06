@@ -1,0 +1,12 @@
+.thumbnail {
+  width: 30px;
+  border-radius: 50%;
+}
+
+.red {
+  color: red;
+}
+
+.post-container {
+  border: 1px solid black;
+}

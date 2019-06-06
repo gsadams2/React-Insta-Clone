@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  width: 644px;
+  padding-left: 5%;
 }
 
 .App-logo {
@@ -32,7 +34,7 @@
   }
 }
 
-.userID {
+/* .userID {
   display: flex;
   justify-content: flex-start;
   margin-left: 20%;
@@ -60,7 +62,7 @@
   margin-left: 20%;
 } */
 
-.button-container {
+/* .button-container {
   flex-direction: row-reverse;
   display: flex;
   justify-content: flex-end;
@@ -76,4 +78,4 @@
 
 .likes {
   margin-left: 10%;
-}
+} */

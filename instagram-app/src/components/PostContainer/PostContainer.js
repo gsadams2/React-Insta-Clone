@@ -1,51 +1,17 @@
 import React, { Component } from "react";
-import CommentSection from "../CommentSection/CommentSection";
+import "./PostContainer.css";
+import Card from "./Card";
 
 class PostContainer extends Component {
   render() {
     return (
-      <div className="post-container">
+      <div>
         {this.props.filteredPosts.length === 0
           ? this.props.data.map(post => {
-              return (
-                <>
-                  <header>
-                    <img src={post.thumbnailUrl} alt="thumbnail" />
-                    <h3>{post.username}</h3>
-                  </header>
-                  <img src={post.imageUrl} alt={post.id} />
-                  <div>
-                    <i class="far fa-heart" />
-                    <i class="far fa-comment" />
-
-                    <section className="likebar">{post.likes} likes</section>
-                  </div>
-                  <CommentSection
-                    comments={post.comments}
-                    timestamp={post.timestamp}
-                  />
-                  key={post.id}
-                </>
-              );
+              return <Card post={post} />;
             })
           : this.props.filteredPosts.map(post => {
-              return (
-                <>
-                  <header>
-                    <img src={post.thumbnailUrl} alt="thumbnail" />
-                    <h3>{post.username}</h3>
-                  </header>
-
-                  <img src={post.imageUrl} alt={post.id} />
-
-                  <section className="likebar">{post.likes} likes</section>
-
-                  <CommentSection
-                    comments={post.comments}
-                    timestamp={post.timestamp}
-                  />
-                </>
-              );
+              return <Card post={post} />;
             })}
       </div>
     );
