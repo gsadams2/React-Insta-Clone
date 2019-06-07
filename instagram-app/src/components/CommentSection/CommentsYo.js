@@ -13,8 +13,7 @@ class CommentsYo extends Component {
   render() {
     return (
       <CommentsDiv>
-        <h3>{this.props.comment.username} &nbsp; </h3>
-
+        <h3>{this.props.comment.username} &nbsp; &nbsp; </h3>
         <p>{this.props.comment.text}</p>
       </CommentsDiv>
     );

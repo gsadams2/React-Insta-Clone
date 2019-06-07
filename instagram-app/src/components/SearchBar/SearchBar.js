@@ -15,7 +15,7 @@ const LogoHeader = styled.div`
 
 const InstagramH1 = styled.h1`
   padding-left: 10%;
-  font-size: 1rem;
+  font-size: 1.8rem;
 `;
 
 const Search = styled.div`
@@ -33,7 +33,7 @@ class SearchBar extends Component {
     return (
       <Header>
         <LogoHeader>
-          <i class="fab fa-instagram" />
+          <i class="fab fa-instagram fa-lg" />
 
           <InstagramH1>Instagram</InstagramH1>
         </LogoHeader>
@@ -50,9 +50,9 @@ class SearchBar extends Component {
         </Search>
 
         <TopRight>
-          <i className="far fa-compass" />
-          <i className="far fa-heart" />
-          <i className="far fa-user" />
+          <i className="far fa-compass fa-lg" />
+          <i className="far fa-heart fa-lg" />
+          <i className="far fa-user fa-lg" />
         </TopRight>
       </Header>
     );
