@@ -1,0 +1,18 @@
+.red {
+  color: red;
+}
+
+.post-container {
+  border: 2px solid gray;
+}
+
+.fa-heart {
+  padding-top: 20%;
+  padding-right: 30%;
+  padding-bottom: 20%;
+}
+
+.fa-comment {
+  padding-bottom: 20%;
+  padding-top: 20%;
+}
